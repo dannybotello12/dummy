@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <title>Arus</title>
+</head>
+
+<body>
+    <main class="login-container">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12">
+
+                    <div class="logo-container">
+                        <div class="logo-image text-center">
+                            <img src="../../assets/images/logo.png" alt="Logotipo ARUS" class="img-responsive login-img">
+                        </div>
+                    </div>
+
+                    <div class="card card-template">
+                        <div class="card-content">
+                            <div class="container-form-group">
+                                <form>
+                                    <div class="row">
+                                        <div class="col-md-6 col-xs-12">
+                                            <div class="form-group form-group-customized">
+                                                <label for="usr" class="label-standard">Tipo de documento empresa</label><span class="span-required-standard">*</span>
+                                                <select class="form-control select-standard">
+                                                    <option value="CC">Cédula de ciudadanía</option>
+                                                    <option value="NIT">Nit</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-xs-12">
+                                            <div class="form-group form-group-customized">
+                                                <label for="id" class="label-standard">Número de documento
+                                                    <span class="span-required-standard">*</span>
+                                                </label>
+                                                <input type="text" class="form-control input-standard" id="usr" maxlength="11">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-xs-12">
+                                            <div class="form-group form-group-customized">
+                                                <label for="usr" class="label-standard">Tipo de documento usuario</label>
+                                                <select class="form-control select-standard">
+                                                    <option value="CC">Cédula de ciudadanía</option>
+                                                    <option value="NIT">Nit</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 col-xs-12">
+                                            <div class="form-group form-group-customized">
+                                                <label for="id" class="label-standard">Número de documento
+                                                    <span class="span-required-standard">*</span>
+                                                </label>
+                                                <input type="text" class="form-control input-standard" id="usr" maxlength="11">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card card-template">
+                        <div class="card-content">
+                            <div class="centered-content">
+                                <div class="contextual-banner full-text">
+                                    <img class="icon icon-info" src="../../assets/images/ic_contextualmessages.png">
+                                    <span class="message">Ingrese la clave que le fue asignada previamente cuando realizo su registro en <strong>www.suaporte.com.co</strong></span>
+                                </div>
+                            </div>
+
+                                <form>
+                                    <div class="row">
+                                        <div class="col-md-12 col-xs-12">
+                                            <div class="form-group form-group-password">
+                                                <label for="id" class="label-standard">Clave
+                                                    <span class="span-required-standard">*</span>
+                                                </label>
+                                                <input type="text" class="form-control input-standard input-password" id="password" maxlength="11">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="login-buttons">
+                                <div class="btn-login">
+                                    <button class="btn btn-primary btn-login"  [routerLink]="['/landing']" >Ingresar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+    </main>
+
+</body>
+
+</html>
