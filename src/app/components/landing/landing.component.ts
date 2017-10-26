@@ -16,6 +16,9 @@ export class LandingComponent implements OnInit {
   ngOnInit() {
 
 
+
+
+
   }
 
   modalDuplicar():void{
@@ -34,6 +37,7 @@ export class LandingComponent implements OnInit {
                  console.log("modal rechazar");
             }
         });
-  }
 
+
+  }
 }

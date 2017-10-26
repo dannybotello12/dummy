@@ -1,4 +1,8 @@
 
+
+
+
+
 body {
     font-family: Roboto, sans-serif;
     background: #f9f9f9;
@@ -792,7 +796,7 @@ margin-left: 50px;
 
 }
 
-#pantalla {
+#main {
     transition: margin-left .5s;
     padding: 16px;
 }
