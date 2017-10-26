@@ -1,6 +1,7 @@
 import { Component, OnInit,ElementRef, Inject,ViewChild  } from '@angular/core';
 import * as jsPDF from 'jspdf'
 import Utils from '../../utils'
+declare var $ :any;
 @Component({
   selector: 'app-resumenpago',
   templateUrl: './resumenpago.component.html',
@@ -14,6 +15,7 @@ export class ResumenpagoComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    $(window).scrollTop(0);
   }
 
   download(){

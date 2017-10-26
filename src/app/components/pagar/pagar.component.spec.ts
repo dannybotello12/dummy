@@ -1,5 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+declare var $ :any;
 import { PagarComponent } from './pagar.component';
 
 describe('PagarComponent', () => {

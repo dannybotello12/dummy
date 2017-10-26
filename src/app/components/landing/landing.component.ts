@@ -2,7 +2,7 @@ import { Component, OnInit,ViewEncapsulation } from '@angular/core';
 import { DuplicarDateComponent } from '../fechaDuplicar/duplicarDate.component';
 import { DialogService } from "ng2-bootstrap-modal";
 import {Router} from "@angular/router"
-
+declare var $ :any;
 @Component({
   selector: 'app-landing',
   templateUrl: './landing.component.html',
@@ -15,7 +15,7 @@ export class LandingComponent implements OnInit {
 
   ngOnInit() {
 
-
+$(window).scrollTop(0);
 
 
 

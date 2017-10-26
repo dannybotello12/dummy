@@ -1,6 +1,6 @@
 import { Component, OnInit,ElementRef, Inject,ViewChild  } from '@angular/core';
 import * as jsPDF from 'jspdf'
-
+declare var $ :any;
 @Component({
   selector: 'app-plantillapagada',
   templateUrl: './plantillapagada.component.html',
@@ -15,6 +15,7 @@ export class PlantillapagadaComponent implements OnInit {
   constructor(@Inject('Window') private window: Window,) { }
 
   ngOnInit() {
+    $(window).scrollTop(0);
   }
 
   download() {

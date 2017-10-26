@@ -2,7 +2,7 @@ import { Component, OnInit,ViewChild  } from '@angular/core';
 import { ConfirmComponent } from '../confirm/confirm.component';
 import { DialogService } from "ng2-bootstrap-modal";
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
-
+declare var $ :any;
 @Component({
   selector: 'app-pagar',
   templateUrl: './pagar.component.html'
@@ -12,6 +12,7 @@ export class PagarComponent implements OnInit {
   constructor(private dialogService:DialogService ,  private router: Router) { }
 
   ngOnInit() {
+    $(window).scrollTop(0);
   }
 
 

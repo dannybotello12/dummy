@@ -1,6 +1,6 @@
 import { Component, OnInit,ViewEncapsulation} from '@angular/core';
 import { Router } from '@angular/router';
-import {UserService} from '../../user.service';
+import {UserService} from '../../Servicios/user.service';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html'
@@ -20,7 +20,7 @@ export class LoginComponent implements OnInit {
     	var password = e.target.elements[4].value;
 
     	if(username == '91354864' && password == 'admin') {
-        this.user.setUserLoggedIn();
+    
     		this.router.navigate(['/landing']);
     	}
     }
