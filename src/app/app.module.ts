@@ -16,6 +16,7 @@ import { BootstrapModalModule } from 'ng2-bootstrap-modal';
 import { ConfirmComponent } from './components/confirm/confirm.component';
 import { ModalmesagnoComponent } from './components/modalmesagno/modalmesagno.component';
 import { DateTimePickerComponent } from './components/shared/date-time-picker/date-time-picker.component';
+import { UserService } from './user.service'
 
 
 
@@ -32,9 +33,9 @@ import { DateTimePickerComponent } from './components/shared/date-time-picker/da
     FooterComponent,
     ResumenpagoComponent,
     ConfirmComponent,
-    
+
     ModalmesagnoComponent,
-    
+
     DateTimePickerComponent
   ],
   imports: [
@@ -45,7 +46,7 @@ import { DateTimePickerComponent } from './components/shared/date-time-picker/da
       ConfirmComponent,
       DuplicarDateComponent
     ],
-  providers: [],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -10,6 +10,8 @@
 </head>
 
 <body>
+  <form (submit)="loginUser($event)">
+
     <main class="login-container">
         <div class="container-fluid">
             <div class="row">
@@ -24,7 +26,7 @@
                     <div class="card card-template">
                         <div class="card-content">
                             <div class="container-form-group">
-                                <form>
+
                                     <div class="row">
                                         <div class="col-md-6 col-xs-12">
                                             <div class="form-group form-group-customized">
@@ -61,7 +63,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                </form>
+
                             </div>
                         </div>
                     </div>
@@ -75,7 +77,7 @@
                                 </div>
                             </div>
 
-                                <form>
+
                                     <div class="row">
                                         <div class="col-md-12 col-xs-12">
                                             <div class="form-group form-group-password">
@@ -86,7 +88,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                </form>
+
                         </div>
                     </div>
 
@@ -94,7 +96,7 @@
                         <div class="col-xs-12">
                             <div class="login-buttons">
                                 <div class="btn-login">
-                                    <button class="btn btn-primary btn-login"  [routerLink]="['/landing']" >Ingresar</button>
+                                    <button class="btn btn-primary btn-login"   >Ingresar</button>
                                 </div>
                             </div>
                         </div>
@@ -104,6 +106,8 @@
           </div>
     </main>
 
+
+</form>
 </body>
 
 </html>
