@@ -1,0 +1,30 @@
+
+                 <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <div class="modal-title">Duplicar Planilla</div>
+                            </div>
+                            <div class="modal-body">
+                                <div class="centered-content">
+                                    <div class="contextual-banner modal-banner full-text">
+                                        <img class="icon icon-info" src="../../assets/images/ic_import.png">
+                                        <div class="modal-message">
+                                            Seleccione el mes del año para el cual desea duplicar la planilla.
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="centered-content">
+                                    <div class="modal-text-bottom-space"><app-date-time-picker></app-date-time-picker></div>
+                                
+                            </div>
+                      
+
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-lg btn-link" data-dismiss="modal" (click)="close()">Cancelar</button>
+                                <button type="button" class="btn btn-primary"    (click)="confirm()" >Aceptar</button>
+                            </div>
+                        </div>
+                    </div>

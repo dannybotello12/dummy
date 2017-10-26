@@ -1,0 +1,85 @@
+
+<nav class="navbar navbar-inverse navbar-static-top">
+  <div class="container-fluid">
+      <div class="row">
+
+         <div class="navbar-header">
+
+           <button type="button"  onclick="openNav()" class="navbar-button"  data-toggle="collapse" data-target="#navbar" aria-expanded="true" aria-controls="navbar">
+             <span class="sr-only">Toggle navigation</span>
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+             <span class="icon-bar"></span>
+           </button>
+           <div id="mySidenav" class="sidenav">
+
+             <div class="card welcome-user-card-menu">
+               <a href="javascript:void(0)" onclick="closeNav()">
+                 <span class="glyphicon glyphicon-arrow-left"></span>
+               </a>
+
+                 <div class="profile-picture-menu">
+                     <img src="../../assets/images/perfil.png" alt="Avatar perfil" class="img-responsive profile-img">
+                 </div>
+                 <div class="user-information-menu">
+                     <div class="welcome-message">
+                         <h4>Bienvenido</h4>
+                     </div>
+                     <div class="user-name-menu">
+                         <h4>Juan Camilo Buendía</h4>
+                     </div>
+                 </div>
+             </div>
+                <div class="flex-container">
+                <div class="row">
+                      <div class="col-xs-12">
+                          <ul  class="nav navbar">
+                           <li>
+
+
+                          </li>
+                           <li><a [routerLink]="['/landing']">
+                              <img id="ctl00_XXX" src="./../assets/images/ic_facturaporpagar.png" style="border: 0; float: left; margin-right: 15px" />
+                              <span id="XXX"><h4>Planilla pendiente de pago</h4></span>
+
+                              </a>
+                          </li>
+                          <li><a [routerLink]="['/plantillapagada']">
+                             <img id="ctl00_XXX" src="./../assets/images/ic_facturas_pagadas.png" style="border: 0; float: left; margin-right: 15px" />
+                             <span id="XXX"><h4>Planillas pagadas</h4></span>
+
+                             </a>
+                         </li>
+                         <li><a [routerLink]="['/chat']">
+                            <img id="ctl00_XXX" src="./../assets/images/ic_menu_robot.png" style="border: 0; float: left; margin-right: 15px" />
+                            <span id="XXX"><h4>Chatea conmigo</h4></span>
+
+                            </a>
+                        </li>
+                        <li><a [routerLink]="['/home']">
+                           <img id="ctl00_XXX" src="./../assets/images/ico_exit.png" style="border: 0; float: left; margin-right: 15px" />
+                           <span id="XXX"><h4>Cerrar sesión</h4></span>
+
+                           </a>
+                       </li>
+
+
+
+                           </ul>
+                      </div>
+
+                      </div>
+
+
+
+
+                      </div>
+                    </div>
+
+              <a class="navbar-brand" href="#">
+              <img src="../../assets/images/logo-sinslogan.png" alt="Logo Arus" class="img-responsive logo">
+              </a>
+              <a class="exit-link pull-right" href="#">Cerrar sesión</a>
+          </div>
+      </div>
+</div>

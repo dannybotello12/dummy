@@ -1,0 +1,101 @@
+<header>
+    <app-menu>
+    </app-menu>
+</header>
+<main id="pantalla">
+       <div class="container-fluid">
+           <div class="row">
+               <div class="col-xs-12">
+                   <div class="card welcome-user-card">
+                       <div class="profile-picture">
+                           <img src="../../assets/images/perfil.png" alt="Avatar perfil" class="img-responsive profile-img">
+                       </div>
+                       <div class="user-information">
+                           <div class="welcome-message">
+                               Bienvenido
+                           </div>
+                           <div class="user-name">
+                               Juan Camilo Buendía
+                           </div>
+                       </div>
+                   </div>
+               </div>
+               <div class="col-xs-12">
+                   <div class="centered-content">
+                       <div class="contextual-banner full-text">
+                           <img class="icon icon-info" src="../../assets/images/ic_info.png">
+                           <span class="message">
+                               Se ha duplicado la planilla exitosamente, le sugerimos revisar su planilla <strong>19827805</strong> y verificar los valores en caso de reportar novedades para el periodo duplicado.
+                           </span>
+                       </div>
+                   </div>
+               </div>
+               <div class="col-xs-12">
+                   <div class="card card-template">
+                       <h2 class="card-title card-template-title">
+                           <strong>Planilla</strong> pendiente de pago
+                           <div class="card-template-number">
+                               <div class="card-template-number-label">N° Planilla</div>
+                               <div class="card-template-number-value">19827805</div>
+                           </div>
+                       </h2>
+                       <div class="card-content">
+                           <blockquote class="card-template-info">
+                               <div class="form-group">
+                                   <label>Forma de elaboración</label>
+                                   <div class="input-value template-status">
+                                       <b>DUPLICADA</b>
+                                   </div>
+                               </div>
+                               <div class="form-group">
+                                   <div class="row">
+                                       <div class="col-xs-6">
+                                           <label>Fecha de guardada</label>
+                                           <div class="text-muted">
+                                               2016/10/26
+                                           </div>
+                                       </div>
+                                       <div class="col-xs-6">
+                                           <label>Hora</label>
+                                           <div class="text-muted">
+                                               07:43:15 pm
+                                           </div>
+                                       </div>
+                                   </div>
+                               </div>
+                               <div class="clearfix"></div>
+                           </blockquote>
+                           <div class="aditional-info">
+                               <div class="form-group">
+                                   <b>Tipo </b><span class="text-muted">Independiente</span>
+                               </div>
+                               <div class="form-group">
+                                   <b>Periodo </b><span class="text-muted">201610</span>
+                               </div>
+                               <div class="form-group">
+                                   <b>Fecha de transacción </b><span class="text-muted">pendiente</span>
+                               </div>
+                           </div>
+                       </div>
+                       <div class="total-payment-container">
+                           <h3 class="payment-title">Total a pagar</h3>
+                           <div class="payment-value">$ 288.200.00</div>
+
+                       </div>
+
+                       <div class="row">
+                           <div class="card-actions">
+                               <div class="col-xs-12">
+                                   <div class="pull-right">
+                                       <button class="btn btn-primary" [routerLink]="['/pagar']" >Pagar Planilla</button>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+
+       </div>
+   </main>
+<app-footer></app-footer>

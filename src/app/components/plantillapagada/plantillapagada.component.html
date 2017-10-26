@@ -1,0 +1,87 @@
+<header>
+    <app-menu>
+    </app-menu>
+</header>
+<main id="pantalla">
+       <div class="container-fluid" >
+           <div class="row">
+               <div class="col-xs-12">
+                   <div class="section-title">
+                       <strong>Planillas</strong> pagadas
+                   </div>
+               </div>
+               <div class="col-xs-12">
+                   <div class="centered-content">
+                       <div class="contextual-banner full-text">
+                           <img class="icon icon-info" src="../../assets/images/ic_contextualmessages.png">
+                           <span class="message">
+                               En esta sección puede encontrar las planillas pagadas durante el año 2017
+                           </span>
+                       </div>
+                   </div>
+               </div>
+               <div class="col-xs-12">
+                   <div class="card card-template">
+                       <div class="card-title card-template-title">
+                           N° planilla<strong>19780397</strong>
+                           <div class="card-template-number">
+                               <div class="pay-status">PAGADA</div>
+                           </div>
+                       </div>
+                       <div class="card-content">
+                           <div class="aditional-info">
+                               <div class="form-group">
+                                   <label>Forma de elaboración &nbsp; <span class="input-value template-status">DUPLICADA</span></label>
+                               </div>
+                               <div class="form-group">
+                                   <div class="row">
+                                       <div class="col-xs-6">
+                                           <label>Identificación</label>
+                                           <div class="text-muted payment-text-muted">
+                                               1017178054
+                                           </div>
+                                       </div>
+                                       <div class="col-xs-6">
+                                           <label>Nombre aportante</label>
+                                           <div class="text-muted payment-text-muted">
+                                               Juan Camilo Buendia
+                                           </div>
+                                       </div>
+                                   </div>
+                               </div>
+
+                               <div class="row">
+                                   <div class="col-xs-6">
+                                       <div class="form-group">
+                                   <b>Tipo </b><span class="text-muted payment-text-muted">Independiente</span>
+                               </div>
+                                   </div>
+                                   <div class="col-xs-6">
+                                       <div class="form-group">
+                                   <b>Periodo </b><span class="text-muted payment-text-muted">201707</span>
+                               </div>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                       <div class="col-xs-12">
+                           <div class="row top-line">
+                               <div class="card-actions">
+                                   <button class="btn btn-lg btn-link" [routerLink]="['/duplicar']">
+                                   <img src="../../assets/images/ic_copy_off.png" alt="Icono duplicar planilla" class="icon icon-right-spaced">Duplicar Planilla</button>
+                                   <a><img src="../../assets/images/ic_download.png"  (click)="download()" alt="Icono descargar comprobante" class="icon pull-right"></a>
+                               </div>
+                           </div>
+                       </div>
+                       <div class="clearfix"></div>
+                   </div>
+               </div>
+           </div>
+
+       </div>
+
+
+
+
+   </main>
+<app-footer></app-footer>

@@ -1,0 +1,22 @@
+<h1 class="title" style="display:none;">
+  {{title}}
+</h1>
+
+<button (click)="mostrarTitulo()">Mostrar titulo</button>
+<div class="container">
+    <div class="col-sm-6" style="height:130px;">
+        <div class="form-group">
+            <div class='input-group date' id='datetimepicker10' >
+                <input type='text' class="form-control" />
+                <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-calendar">
+                    </span>
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <label for="startDate">Date :</label>
+        <input name="startDate" id="startDate" class="date-picker"  (click)="calendar()" />
+
+    <input class="date-own form-control" style="width: 300px;" type="text">
