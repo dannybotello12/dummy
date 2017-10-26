@@ -3,9 +3,6 @@ import { ConfirmComponent } from '../confirm/confirm.component';
 import { DialogService } from "ng2-bootstrap-modal";
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 
-
-
-
 @Component({
   selector: 'app-pagar',
   templateUrl: './pagar.component.html'
