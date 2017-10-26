@@ -10,7 +10,9 @@ declare var $ :any;
 })
 export class LandingComponent implements OnInit {
 
-
+ showplantillas:boolean = true;
+ showpagadas: boolean = false;
+ shownoplantillas: boolean = false;
   constructor(private dialogService:DialogService ,  private router: Router) { }
 
   ngOnInit() {

@@ -6,7 +6,7 @@
         </app-menu>
     </header>
     <main id="pantalla">
-        <div class="container-fluid">
+        <div class="container-fluid" *ngIf="showplantillas">
             <div class="row">
                 <div class="col-xs-12">
                     <div class="card welcome-user-card">
@@ -161,6 +161,74 @@
             </div>
 
         </div>
+
+        <div class="container-fluid" *ngIf="shownoplantillas" >
+         <div class="row">
+             <div class="col-xs-12">
+                 <div class="card card-full-height">
+                     <div class="welcome-user-card">
+                         <div class="profile-picture">
+                             <img src="../../assets/images/perfil.png" alt="Avatar perfil" class="img-responsive profile-img">
+                         </div>
+                         <div class="user-information">
+                             <div class="welcome-message">
+                                 Bienvenido
+                             </div>
+                             <div class="user-name">
+                                 Juan Camilo Buendía
+                             </div>
+                         </div>
+                     </div>
+                     <div class="card-content-done">
+                         <div class="card-image">
+                             <img src="../../assets/images/ic_nohayplanilla.png" alt="Ico pagos al día">
+                         </div>
+                         <div class="card-message col-md-offset-2 col-md-8">
+                             <h3>¡No tiene planillas creadas!</h3>
+                             <span class="card-message-text">En este momento usted no cuenta con ninguna  planilla creada, de clic en el siguiente link
+                                     <span><a>https://www.suaporte.com.co/Web/</a></span>
+                                     y proceda a crear su primera planilla
+                             </span>
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+
+     </div>
+
+     <div class="container-fluid" *ngIf="showpagadas" >
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="card card-full-height">
+                        <div class="welcome-user-card">
+                            <div class="profile-picture">
+                                <img src="../../assets/images/perfil.png" alt="Avatar perfil" class="img-responsive profile-img">
+                            </div>
+                            <div class="user-information">
+                                <div class="welcome-message">
+                                    Bienvenido
+                                </div>
+                                <div class="user-name">
+                                    Juan Camilo Buendía
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-content-done">
+                            <div class="card-image">
+                                <img src="../../assets/images/ic_todoAlDia.png" alt="Ico pagos al día">
+                            </div>
+                            <div class="card-message col-md-offset-2 col-md-8">
+                                    <h3>¡Felicitaciones!</h3>
+                                    <span class="card-message-text">Usted tiene todos los pagos al día.</span>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
     </main>
     <app-footer>
     </app-footer>
