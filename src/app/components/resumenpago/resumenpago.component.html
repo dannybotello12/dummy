@@ -67,7 +67,7 @@
                                         <div class="form-group">
                                             <label>Fecha</label>
                                             <div class="text-muted payment-text-muted">
-                                                2017/07/25
+                                              {{ plantillapagar.fechatrans}}
                                             </div>
                                         </div>
                                     </div>
@@ -75,7 +75,7 @@
                                         <div class="form-group">
                                             <label>Hora</label>
                                             <div class="text-muted payment-text-muted">
-                                                09:48:24 AM
+                                              {{ plantillapagar.horatrans}}
                                             </div>
                                         </div>
                                     </div>
@@ -85,7 +85,7 @@
                                         <div class="form-group">
                                             <label>Período de cotización otros riesgos</label>
                                             <div class="text-muted payment-text-muted">
-                                                Septiembre de 2017
+                                                {{ plantillapagar.perido}}
                                             </div>
                                         </div>
                                     </div>
@@ -95,7 +95,7 @@
                                         <div class="form-group">
                                             <label>Período de cotización para salud</label>
                                             <div class="text-muted payment-text-muted">
-                                                Septiembre de 2017
+                                                  {{ plantillapagar.perido}}
                                             </div>
                                         </div>
                                     </div>
@@ -105,7 +105,7 @@
                                         <div class="form-group">
                                             <label>Empresa</label>
                                             <div class="text-muted payment-text-muted">
-                                                Independiente
+                                              {{ plantillapagar.tipo}}
                                             </div>
                                         </div>
                                     </div>
@@ -113,7 +113,7 @@
                                         <div class="form-group">
                                             <label>ID</label>
                                             <div class="text-muted payment-text-muted">
-                                                1017178054
+                                                {{ documento}}
                                             </div>
                                         </div>
                                     </div>
@@ -123,7 +123,7 @@
                                         <div class="form-group">
                                             <label>Nombre aportante</label>
                                             <div class="text-muted payment-text-muted">
-                                                Juan Camilo Buendia
+                                                {{ nombre}}
                                             </div>
                                         </div>
                                     </div>
@@ -203,7 +203,7 @@
                                                 <img class="icon-right-spaced icon icon-info" src="../../assets/images/ic-info-simple.png">
                                                 <div class="content">
                                                     <span>Referencia de pago / N° planilla</span><br>
-                                                    <strong>19827805</strong>
+                                                    <strong>  {{ plantillapagar.nro}}</strong>
                                                 </div>
                                             </div>
                                             <div class="card-content">
@@ -212,7 +212,7 @@
                                                         <div class="form-group">
                                                             <label>Tipo de planilla</label>
                                                             <div class="text-muted payment-text-muted">
-                                                                Independiente
+                                                                {{ plantillapagar.tipo}}
                                                             </div>
                                                         </div>
                                                     </div>
@@ -232,7 +232,7 @@
                                                         <div class="form-group">
                                                             <label>Banco</label>
                                                             <div class="text-muted payment-text-muted">
-                                                                (1054) - Bancolombia
+                                                                {{ plantillapagar.banco}}
                                                             </div>
                                                         </div>
                                                     </div>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { plantilla } from '../../Servicios/plantilla';
+import {Router,ActivatedRoute } from "@angular/router"
 
 declare var $ :any;
 @Component({
@@ -8,10 +9,12 @@ declare var $ :any;
 })
 export class DuplicarComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router) { }
  nombre:String;
  duplicada:plantilla;
-  
+ Allplantillas:plantilla[]=[];
+ plantillapagar:plantilla;
+
   ngOnInit() {
     $(window).scrollTop(0);
        this.nombre=localStorage.getItem("Nombre");
@@ -19,6 +22,17 @@ export class DuplicarComponent implements OnInit {
        this.duplicada=JSON.parse( localStorage.getItem("duplicadaplatillas"));
        console.log(   this.duplicada);
 
+
+  }
+
+  pagar()
+  {
+      this.Allplantillas=JSON.parse( localStorage.getItem("platillas"));
+      console.log(this.Allplantillas.length);
+      this.duplicada=JSON.parse( localStorage.getItem("duplicadaplatillas"));
+      localStorage.setItem("platillasapagar", JSON.stringify(this.duplicada));
+      localStorage.setItem("indexpagar", String(this.Allplantillas.length-1));
+      this.router.navigate(['/pagar']);
 
   }
 

@@ -1,7 +1,13 @@
 import * as jsPDF from 'jspdf'
+import { plantilla } from './Servicios/plantilla';
 
 export default class Utils {
     static CrearPdf() {
+
+      let plantillapagar:plantilla;
+      let documento=localStorage.getItem("documento");
+      let nombre=localStorage.getItem("Nombre");
+       plantillapagar=JSON.parse( localStorage.getItem("platillasapagar"));
 
 
       let doc = new jsPDF();
@@ -48,13 +54,13 @@ export default class Utils {
       doc.text(20, 35, '900089104-5');
       doc.text(20, 45, 'ARUS (antes Enlace Operativo)');
       doc.text(20, 55, 'Pago de Seguridad Social');
-      doc.text(20, 65, '2017/07/25');
-      doc.text(120, 65, '09:48:24 AM');
-      doc.text(20, 75, 'Septiembre de 2017');
-      doc.text(20, 85, 'Septiembre de 2017');
-      doc.text(20, 95, 'Independiente');
-      doc.text(120,95, '1017178054');
-      doc.text(20,105, 'Juan Camilo Buendia');
+      doc.text(20, 65,  plantillapagar.fechatrans);
+      doc.text(120, 65, plantillapagar.horatrans);
+      doc.text(20, 75,  plantillapagar.perido);
+      doc.text(20, 85,  plantillapagar.perido);
+      doc.text(20, 95,  plantillapagar.forma);
+      doc.text(120,95,  documento);
+      doc.text(20,105,  nombre);
       doc.text(20,115, 'pruebas.suaporte.com.co');
 
       doc.rect(20, 135, 40, 10);
@@ -86,18 +92,18 @@ export default class Utils {
       doc.setFontType("bold");
       doc.text(25, 180, 'Referencia de pago / N° planilla');
       doc.setFontType("normal");
-      doc.text(25, 185, '19827805');
+      doc.text(25, 185,  plantillapagar.nro);
       doc.rect(20, 190, 160, 60);
 
-      doc.text(25, 200, 'Independiente');
+      doc.text(25, 200,  plantillapagar.forma);
       doc.text(25, 210, '276678229');
-      doc.text(25, 220, '(1054) - ABDUL HELMFINANTIAL BANK');
+      doc.text(25, 220,  plantillapagar.banco);
       doc.text(25, 230, '$ 288.200.00');
 
 
 
     // Save the PDF
-    doc.save('ReciboPago19780397.pdf');
+    doc.save('ReciboPago'+ plantillapagar.nro+'.pdf');
 
      }
 
