@@ -14,8 +14,13 @@
 
 <script>
 
-$("#pantalla").on('touchstart', function () {
+$("#pantalla").on({
+    touchstart: function(){
       closeNav();
+    }, 
+    click: function(){
+      closeNav();
+    } 
 });
 
 function openNav() {
