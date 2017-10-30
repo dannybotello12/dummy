@@ -137,7 +137,8 @@ Allplantillas:plantilla[]=[];
                  perido:periodosiguiente,
                  fechatrans:"pendiente",
                  total:"$ 288.200.00",
-                 banco:""}
+                 banco:"",
+                 horatrans : ""}
 
                   this.Allplantillas=JSON.parse( localStorage.getItem("platillas"));
                   this.Allplantillas.push(this.duplicada);
