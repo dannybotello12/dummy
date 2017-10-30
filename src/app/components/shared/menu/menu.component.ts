@@ -7,13 +7,18 @@ import { Component, OnInit } from '@angular/core';
 export class MenuComponent implements OnInit {
 
   constructor() { }
-
+nombre:String
   ngOnInit() {
+
+       this.nombre=localStorage.getItem("Nombre");
+    
+
+
   }
 
 
 
-  
+
 
 
 

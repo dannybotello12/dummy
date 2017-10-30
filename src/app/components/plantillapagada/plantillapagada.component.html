@@ -20,10 +20,10 @@
                        </div>
                    </div>
                </div>
-               <div class="col-xs-12">
+               <div class="col-xs-12" *ngFor="let planilla of Allplantillaspagdas; let i=index" >
                    <div class="card card-template">
                        <div class="card-title card-template-title">
-                           N° planilla<strong>19780397</strong>
+                           N° planilla<strong> {{planilla.nro}}</strong>
                            <div class="card-template-number">
                                <div class="pay-status">PAGADA</div>
                            </div>
@@ -31,21 +31,20 @@
                        <div class="card-content">
                            <div class="aditional-info">
                                <div class="form-group">
-                                   <label>Forma de elaboración &nbsp; <span class="input-value template-status">DUPLICADA</span></label>
+                                   <label>Forma de elaboración &nbsp; <span class="input-value template-status">  {{planilla.forma}} </span></label>
                                </div>
                                <div class="form-group">
                                    <div class="row">
                                        <div class="col-xs-6">
                                            <label>Identificación</label>
                                            <div class="text-muted payment-text-muted">
-                                               1017178054
+                                                  {{documento}}
                                            </div>
                                        </div>
                                        <div class="col-xs-6">
                                            <label>Nombre aportante</label>
                                            <div class="text-muted payment-text-muted">
-                                               Juan Camilo Buendia
-                                           </div>
+                                            {{nombre}}                                           </div>
                                        </div>
                                    </div>
                                </div>
@@ -53,12 +52,12 @@
                                <div class="row">
                                    <div class="col-xs-6">
                                        <div class="form-group">
-                                   <b>Tipo </b><span class="text-muted payment-text-muted">Independiente</span>
+                                   <b>Tipo </b><span class="text-muted payment-text-muted"> {{planilla.tipo}}</span>
                                </div>
                                    </div>
                                    <div class="col-xs-6">
                                        <div class="form-group">
-                                   <b>Periodo </b><span class="text-muted payment-text-muted">201707</span>
+                                   <b>Periodo </b><span class="text-muted payment-text-muted"> {{planilla.perido}}</span>
                                </div>
                                    </div>
                                </div>
@@ -67,7 +66,7 @@
                        <div class="col-xs-12">
                            <div class="row top-line">
                                <div class="card-actions">
-                                   <button class="btn btn-lg btn-link" [routerLink]="['/duplicar']">
+                                   <button class="btn btn-lg btn-link" (click)="modalDuplicar()">
                                    <img src="../../assets/images/ic_copy_off.png" alt="Icono duplicar planilla" class="icon icon-right-spaced">Duplicar Planilla</button>
                                    <a><img src="../../assets/images/ic_download.png"  (click)="download()" alt="Icono descargar comprobante" class="icon pull-right"></a>
                                </div>

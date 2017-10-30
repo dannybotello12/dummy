@@ -19,7 +19,7 @@ export class ResumenpagoComponent implements OnInit {
   }
 
   download(){
-    console.log("ssd");
+  
     Utils.CrearPdf();
   }
 

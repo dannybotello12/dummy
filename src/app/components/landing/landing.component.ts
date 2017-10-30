@@ -1,7 +1,9 @@
 import { Component, OnInit,ViewEncapsulation } from '@angular/core';
 import { DuplicarDateComponent } from '../fechaDuplicar/duplicarDate.component';
 import { DialogService } from "ng2-bootstrap-modal";
-import {Router} from "@angular/router"
+import {Router,ActivatedRoute } from "@angular/router"
+import { plantilla } from '../../Servicios/plantilla';
+
 declare var $ :any;
 @Component({
   selector: 'app-landing',
@@ -10,16 +12,70 @@ declare var $ :any;
 })
 export class LandingComponent implements OnInit {
 
- showplantillas:boolean = true;
  showpagadas: boolean = false;
+ showplantillas:boolean = true;
  shownoplantillas: boolean = false;
-  constructor(private dialogService:DialogService ,  private router: Router) { }
+ nombre:String;
+Allplantillas:plantilla[]=[];
+plantillapagar:plantilla;
+
+constructor(private dialogService:DialogService ,  private router: Router,private route: ActivatedRoute) { }
+caso: string;
+
 
   ngOnInit() {
 
 $(window).scrollTop(0);
 
+   this.nombre=localStorage.getItem("Nombre");
 
+
+
+
+this.caso=localStorage.getItem("caso");
+this.Allplantillas=JSON.parse( localStorage.getItem("platillas"));
+console.log(this.Allplantillas.length);
+
+if (this.caso=="1")
+{
+if (this.Allplantillas.length > 0)
+{
+  this.showpagadas = false;
+  this.showplantillas = true;
+  this.shownoplantillas = false;
+}
+
+else{
+  this.showpagadas = true;
+  this.showplantillas = false;
+  this.shownoplantillas = false;
+}
+
+}
+
+
+if (this.caso=="2")
+{
+  if (this.Allplantillas.length > 0)
+  {
+    this.showpagadas = false;
+    this.showplantillas = true;
+    this.shownoplantillas = false;
+  }
+
+  else{
+    this.showpagadas = true;
+    this.showplantillas = false;
+    this.shownoplantillas = false;
+  }
+}
+
+if (this.caso=="3")
+{
+  this.showpagadas = false;
+  this.showplantillas = false;
+  this.shownoplantillas = true;
+}
 
   }
 
@@ -40,6 +96,15 @@ $(window).scrollTop(0);
             }
         });
 
+
+  }
+
+  pagar(idx:number)
+  {
+    this.plantillapagar=this.Allplantillas[idx];
+    localStorage.setItem("platillasapagar", JSON.stringify(this.plantillapagar));
+      localStorage.setItem("indexpagar", String(idx));
+      this.router.navigate(['/pagar']);
 
   }
 }
