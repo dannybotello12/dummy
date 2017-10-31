@@ -563,8 +563,7 @@ input#usr{
     bottom: 0;
     left: 0;
     z-index: 1050;
-    overflow: hidden;
-    -webkit-overflow-scrolling: touch;
+
     outline: 0;
 }
 
@@ -585,7 +584,7 @@ input#usr{
     height: auto;
     margin: 10px;
     top:200px;
-    overflow-y:scroll;
+
 
 
 }
@@ -613,8 +612,14 @@ input#usr{
     .modal-dialog {
         width: 600px;
         margin: 30px auto;
-
     }
+}
+  @media (min-width: 100px)  and (max-width: 480px) {
+      .modal-message{
+          font-size: 11px
+      }
+
+
 }
 
 
@@ -806,7 +811,7 @@ margin-left: 50px;
 @media screen and (min-width: 100px)  and (max-width: 300px) {
   .sidenav {padding-top: 0px;}
   .sidenav a {font-size: 10px;}
-}/* You can add global styles to this file, and also import other style files */
+} /* You can add global styles to this file, and also import other style files */
 
 @media screen and (min-width: 301px)  and (max-width: 700px) {
   .sidenav {padding-top: 0px;}
