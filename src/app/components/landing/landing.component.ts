@@ -5,6 +5,7 @@ import {Router,ActivatedRoute } from "@angular/router"
 import { plantilla } from '../../Servicios/plantilla';
 
 declare var $ :any;
+declare var closeNav :Function;
 @Component({
   selector: 'app-landing',
   templateUrl: './landing.component.html',
