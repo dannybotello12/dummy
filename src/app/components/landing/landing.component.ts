@@ -25,6 +25,15 @@ caso: string;
 
   ngOnInit() {
 
+    $("#pantalla").on({
+      touchstart: function(){
+        closeNav();
+      }, 
+      click: function(){
+        closeNav();
+      } 
+    });
+
 $(window).scrollTop(0);
 
    this.nombre=localStorage.getItem("Nombre");
