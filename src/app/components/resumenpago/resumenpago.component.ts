@@ -37,7 +37,7 @@ export class ResumenpagoComponent implements OnInit {
 
   }
 
-  download(idx:number){
+  download(){
 
     Utils.CrearPdf();
   }
