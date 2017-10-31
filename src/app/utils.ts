@@ -71,7 +71,7 @@ export default class Utils {
       doc.text(23,143, 'COLFONDOS');
       doc.text(63,143, '$160.000');
       doc.text(103,143, '$1.800');
-      doc.text(143,143, '$161.000');
+      doc.text(143,143, '$161.800');
 
 
       doc.rect(20, 145, 40, 10);

@@ -582,8 +582,11 @@ input#usr{
 .modal-dialog {
     position: relative;
     width: auto;
+    height: auto;
     margin: 10px;
     top:200px;
+    overflow-y:scroll;
+
 
 }
 
@@ -610,6 +613,7 @@ input#usr{
     .modal-dialog {
         width: 600px;
         margin: 30px auto;
+
     }
 }
 
