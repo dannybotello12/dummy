@@ -461,6 +461,7 @@ input#usr{
 /*MODAL*/
 .modal-content {
     border-radius: 0px;
+    top: 100px
 }
 .modal-banner{
     background: #F2F2F2;
@@ -557,13 +558,14 @@ input#usr{
 }
 
 .modal {
-    position: fixed;
+  position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
     z-index: 1050;
-
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
     outline: 0;
 }
 
@@ -579,11 +581,9 @@ input#usr{
 }
 
 .modal-dialog {
-    position: relative;
-    width: auto;
-    height: auto;
-    margin: 10px;
-    top:200px;
+  position: relative;
+  width: auto;
+  margin: 10px;
 
 
 
@@ -608,12 +608,7 @@ input#usr{
 
 }
 
-@media (min-width: 768px) {
-    .modal-dialog {
-        width: 600px;
-        margin: 30px auto;
-    }
-}
+
   @media (min-width: 100px)  and (max-width: 480px) {
       .modal-message{
           font-size: 11px
