@@ -34,7 +34,7 @@ $(window).scrollTop(0);
 
 this.caso=localStorage.getItem("caso");
 this.Allplantillas=JSON.parse( localStorage.getItem("platillas"));
-console.log(this.Allplantillas);
+
 
 if (this.caso=="1")
 {
@@ -80,7 +80,7 @@ if (this.caso=="3")
   }
 
   modalDuplicar():void{
-    console.log("modal");
+
     let disposable = this.dialogService.addDialog(DuplicarDateComponent, {
         title:'Confirm title',
         message:'Confirm message'})
@@ -88,11 +88,11 @@ if (this.caso=="3")
             //We get dialog result
             if(isConfirmed) {
                    this.router.navigate(['/duplicar']);
-                 console.log("modal aceptar");
+
             }
             else {
 
-                 console.log("modal rechazar");
+            
             }
         });
 

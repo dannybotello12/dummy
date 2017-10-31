@@ -2,6 +2,7 @@ import { Component, OnInit,ViewEncapsulation} from '@angular/core';
 import { Router } from '@angular/router';
 import {UserService} from '../../Servicios/user.service';
 import { plantilla } from '../../Servicios/plantilla';
+import { FormControl, FormGroup, Validators,ReactiveFormsModule,NgForm  } from '@angular/forms';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html'
@@ -9,17 +10,21 @@ import { plantilla } from '../../Servicios/plantilla';
 export class LoginComponent implements OnInit {
 
   constructor(private router:Router,private user:UserService) { }
-
+   mostraralerta:boolean;
+   alerta:string;
 
   ngOnInit() {
   }
 
 
-  loginUser(e) {
+  loginUser(e,forma:NgForm) {
     	e.preventDefault();
 
-      let caso:number;
 
+      if (forma.valid)
+      {
+
+      let caso:number=0;
     	var username = e.target.elements[1].value;
     	var password = e.target.elements[4].value;
       let Allplantillasvacias:plantilla[]=[];
@@ -120,5 +125,20 @@ total:"$ 288.200.00",
           localStorage.setItem("periodosiguiente","0");
 
     	}
+
+      if (caso==0)
+      {
+        this.mostraralerta=true;
+        this.alerta= "Usuario o Contraseña incorrecta"
+      }
+
     }
+    else
+    {
+         this.mostraralerta=true;
+         this.alerta= "Debe ingresar datos Obligatorios"
+
+    }
+  }
+
 }

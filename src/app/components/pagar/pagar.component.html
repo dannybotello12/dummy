@@ -6,6 +6,7 @@
 <main id="pantalla">
       <div class="container-fluid">
           <div class="row">
+                <form (ngSubmit)="showConfirm(forma)" #forma="ngForm">
               <div class="col-xs-12">
                   <div class="card card-template">
                       <h2 class="card-title card-template-title">
@@ -182,21 +183,36 @@
                           </div>
                       </div>
                       <div class="container-form-group">
-                              <form>
+
                                   <div class="row">
                                       <div class="col-xs-12">
                                           <div class="form-group form-group-customized">
                                               <label for="usr" class="label-standard">Banco</label><span class="span-required-standard">*</span>
-                                              <select class="form-control select-standard" id ="banco">
-                                                  <option value="bank">Seleccionar banco</option>
+                                              <select class="form-control select-standard" id ="banco"
+
+                                              required
+                                              name="banco"
+                                              #banco="ngModel"
+                                              ngModel
+                                              (click)="validar()"
+                                              >
+                                                  <option value="" selected disabled hidden>Selección de Banco</option>
                                                   <option  value="Bancolombia" >Bancolombia</option>
                                                   <option  value="Davivienda">Davivienda</option>
                                                   <option  value="Citibank">Citibank</option>
+
                                               </select>
                                           </div>
                                       </div>
+
                                   </div>
-                              </form>
+                                  <div *ngIf="bancovalido"
+                                          class="alert alert-danger">
+                                  <div>
+                                        Este campo es requerido
+                                  </div>
+                                </div>
+
                           </div>
                   </div>
               </div>
@@ -209,12 +225,13 @@
                       <div class="col-xs-6">
                           <div class="pull-right">
 
-                              <button class="btn btn-primary" (click)="showConfirm()" >Pagar por PSE</button>
+                              <button class="btn btn-primary"  >Pagar por PSE</button>
                           </div>
                       </div>
                   </div>
               </div>
           </div>
+          </form>
       </div>
 
 

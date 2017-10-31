@@ -858,3 +858,11 @@ margin-left: 50px;
   font-size: 20px;
   color: black;
 }
+
+.ng-valid[required], .ng-valid.required  {
+  border-left: 5px solid lightskyblue; /* green */
+}
+
+.ng-invalid:not(form)  {
+  border-left: 5px solid #a94442; /* red */
+}

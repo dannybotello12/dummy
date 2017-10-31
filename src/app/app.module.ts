@@ -17,6 +17,7 @@ import { ConfirmComponent } from './components/confirm/confirm.component';
 import { ModalmesagnoComponent } from './components/modalmesagno/modalmesagno.component';
 import { DateTimePickerComponent } from './components/shared/date-time-picker/date-time-picker.component';
 import { UserService } from './Servicios/user.service'
+import { ReactiveFormsModule,FormsModule } from '@angular/forms';
 
 
 
@@ -40,7 +41,7 @@ import { UserService } from './Servicios/user.service'
     DateTimePickerComponent
   ],
   imports: [
-    BrowserModule,APP_ROUTING,BootstrapModalModule,CommonModule
+    BrowserModule,APP_ROUTING,BootstrapModalModule,CommonModule,ReactiveFormsModule,FormsModule
   ],
 
   entryComponents: [

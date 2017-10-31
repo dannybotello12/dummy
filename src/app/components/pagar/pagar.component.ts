@@ -4,6 +4,7 @@ import { DialogService } from "ng2-bootstrap-modal";
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { DuplicarDateComponent } from '../fechaDuplicar/duplicarDate.component';
 import { plantilla } from '../../Servicios/plantilla';
+import { FormControl, FormGroup, Validators,ReactiveFormsModule,NgForm  } from '@angular/forms';
 declare var $ :any;
 @Component({
   selector: 'app-pagar',
@@ -16,6 +17,7 @@ export class PagarComponent implements OnInit {
    fechapago:string;
     Allplantillaspagdas:plantilla[]=[];
     Allplantillas:plantilla[]=[];
+    bancovalido:boolean;
 
   constructor(private dialogService:DialogService ,  private router: Router) { }
 caso: number;
@@ -30,9 +32,10 @@ caso: number;
   }
 
 
-  showConfirm() {
+  showConfirm(forma:NgForm) {
 
-             console.log("modal");
+    if (forma.valid)
+    {
               let disposable = this.dialogService.addDialog(ConfirmComponent, {
                   title:'Confirm title',
                   message:'Confirm message'})
@@ -101,18 +104,33 @@ caso: number;
 
 
                             this.router.navigate(['/resumenpago']);
-                            console.log("modal aceptar");
+
                       }
                       else {
 
-                           console.log("modal rechazar");
+
                       }
                   });
               //We can close dialog calling disposable.unsubscribe();
               //If dialog was not closed manually close it by timeout
 
           }
+          else
+          {
+            this.bancovalido=true;
+          }
+}
 
-
+validar()
+{
+if(  (<HTMLInputElement>document.getElementById('banco')).value=="")
+{
+  this.bancovalido=true;
+}
+else
+{
+  this.bancovalido=false;
+}
+}
 
 }

@@ -10,7 +10,7 @@
 </head>
 
 <body>
-  <form (submit)="loginUser($event)">
+  <form (ngSubmit)="loginUser($event,forma)" #forma="ngForm">
 
     <main class="login-container">
         <div class="container-fluid">
@@ -38,16 +38,33 @@
                                             </div>
                                         </div>
                                         <div class="col-md-6 col-xs-12">
-                                            <div class="form-group form-group-customized">
+                                            <div class="form-group form-group-customized" >
                                                 <label for="id" class="label-standard">Número de documento
                                                     <span class="span-required-standard">*</span>
                                                 </label>
-                                                <input type="text" class="form-control input-standard" id="usr" maxlength="11">
+                                                <input type="text" class="form-control input-standard"
+                                                required
+                                                name="cusurio"
+                                                 id="usr"
+                                                 maxlength="11"
+                                                 ngModel
+                                                 #cusurio="ngModel"
+                                                  maxlength="11">
+
+
                                             </div>
+                                            <div *ngIf="cusurio.invalid && (cusurio.dirty || cusurio.touched)"
+                                                    class="alert alert-danger">
+                                            <div *ngIf="cusurio.errors?.required" >
+                                                  Este campo es requerido
+                                            </div>
+                                          </div>
                                         </div>
-                                        <div class="col-md-6 col-xs-12">
+
+
+                                            <div class="col-md-6 col-xs-12">
                                             <div class="form-group form-group-customized">
-                                                <label for="usr" class="label-standard">Tipo de documento usuario</label>
+                                                <label for="usr" class="label-standard">Tipo de documento usuario</label><span class="span-required-standard">*</span>
                                                 <select class="form-control select-standard">
                                                     <option value="CC">Cédula de ciudadanía</option>
                                                     <option value="NIT">Nit</option>
@@ -59,8 +76,21 @@
                                                 <label for="id" class="label-standard">Número de documento
                                                     <span class="span-required-standard">*</span>
                                                 </label>
-                                                <input type="text" class="form-control input-standard" id="usr" maxlength="11">
+                                                <input type="text" class="form-control input-standard"
+                                                required
+                                                name="cde"
+                                                 id="cde"
+                                                 minlength="1"
+                                                 ngModel
+                                                 #cde="ngModel"
+                                                  maxlength="11">
                                             </div>
+                                            <div *ngIf="cde.invalid && (cde.dirty || cde.touched)"
+                                                    class="alert alert-danger">
+                                            <div *ngIf="cde.errors?.required" >
+                                                  Este campo es requerido
+                                            </div>
+                                          </div>
                                         </div>
                                     </div>
 
@@ -84,14 +114,30 @@
                                                 <label for="id" class="label-standard">Clave
                                                     <span class="span-required-standard">*</span>
                                                 </label>
-                                                <input type="password" class="form-control input-standard input-password" id="password" maxlength="11">
+                                                <input type="password" class="form-control input-standard input-password"
+                                                id="password"
+                                                maxlength="11"
+                                                minlength="1"
+                                                required
+                                                name="clave"
+                                                #clave="ngModel"
+                                                ngModel>
                                             </div>
+                                            <div *ngIf="clave.invalid && (clave.dirty || clave.touched)"
+                                                    class="alert alert-danger">
+                                            <div *ngIf="clave.errors?.required" >
+                                                  Este campo es requerido
+                                            </div>
+                                          </div>
                                         </div>
                                     </div>
 
                         </div>
                     </div>
+                    <div class="alert alert-danger" *ngIf="mostraralerta">
 
+                      <strong>Alerta!</strong> {{alerta}}.
+                    </div>
                     <div class="row">
                         <div class="col-xs-12">
                             <div class="login-buttons">

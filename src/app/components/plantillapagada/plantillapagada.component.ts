@@ -36,7 +36,7 @@ plantillapagar:plantilla;
   }
 
   modalDuplicar():void{
-    console.log("modal");
+
     let disposable = this.dialogService.addDialog(DuplicarDateComponent, {
         title:'Confirm title',
         message:'Confirm message'})
@@ -149,7 +149,7 @@ plantillapagar:plantilla;
             }
             else {
 
-                 console.log("modal rechazar");
+              
             }
         });
 

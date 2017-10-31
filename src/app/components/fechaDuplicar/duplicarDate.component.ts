@@ -21,10 +21,9 @@ export class DuplicarDateComponent extends DialogComponent<ConfirmModel, boolean
     this.result = true;
     e.preventDefault();
 
-  console.log(e);  
-  console.log(  (<HTMLInputElement>document.getElementById('datetimepicker10')).value);
 
-    localStorage.setItem("periodoseleccion",String((<HTMLInputElement>document.getElementById('datetimepicker10')).value));
+
+
     this.close();
   }
 
