@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DialogComponent, DialogService } from "ng2-bootstrap-modal";
+import { plantilla } from '../../Servicios/plantilla';
 export interface ConfirmModel {
   title:string;
   message:string;
@@ -12,6 +13,9 @@ export interface ConfirmModel {
 export class ConfirmComponent extends DialogComponent<ConfirmModel, boolean> implements ConfirmModel {
   title: string;
   message: string;
+  nombre:String;
+ Allplantillas:plantilla[]=[];
+ plantillapagar:plantilla;
   constructor(dialogService: DialogService) {
     super(dialogService);
   }
@@ -23,6 +27,11 @@ export class ConfirmComponent extends DialogComponent<ConfirmModel, boolean> imp
   }
 
   ngOnInit() {
+
+     this.nombre=localStorage.getItem("Nombre");
+     this.plantillapagar=JSON.parse( localStorage.getItem("platillasapagar"));
+
+
   }
 
 }

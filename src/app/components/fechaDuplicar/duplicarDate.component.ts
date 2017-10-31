@@ -15,10 +15,16 @@ export class DuplicarDateComponent extends DialogComponent<ConfirmModel, boolean
   constructor(dialogService: DialogService) {
     super(dialogService);
   }
-  confirm() {
+  confirm(e) {
     // we set dialog result as true on click on confirm button,
     // then we can get dialog result from caller code
     this.result = true;
+    e.preventDefault();
+
+  console.log(e);  
+  console.log(  (<HTMLInputElement>document.getElementById('datetimepicker10')).value);
+
+    localStorage.setItem("periodoseleccion",String((<HTMLInputElement>document.getElementById('datetimepicker10')).value));
     this.close();
   }
 

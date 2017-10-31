@@ -43,7 +43,7 @@ $(window).scrollTop(0);
 
 this.caso=localStorage.getItem("caso");
 this.Allplantillas=JSON.parse( localStorage.getItem("platillas"));
-console.log(this.Allplantillas.length);
+console.log(this.Allplantillas);
 
 if (this.caso=="1")
 {

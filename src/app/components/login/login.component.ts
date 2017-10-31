@@ -61,8 +61,8 @@ tipo:"Independiente",
 perido:"201707",
 fechatrans:"2017/07/01",
 total:"$ 288.200.00",
- banco:"",
-  horatrans:""
+banco:"Bancolombia",
+horatrans:"10:00:00"
 },
 {
 nro: "19780396",
@@ -73,8 +73,8 @@ tipo:"Independiente",
 perido:"201708",
 fechatrans:"2017/08/01",
 total:"$ 288.200.00",
- banco:"",
- horatrans:""
+ banco:"Davivienda",
+ horatrans:"14:20:10"
 }
 ]
 

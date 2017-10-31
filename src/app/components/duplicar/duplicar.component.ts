@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { plantilla } from '../../Servicios/plantilla';
+import {Router,ActivatedRoute } from "@angular/router"
 
 declare var $ :any;
 declare var closeNav: Function ;
@@ -9,10 +10,12 @@ declare var closeNav: Function ;
 })
 export class DuplicarComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router) { }
  nombre:String;
  duplicada:plantilla;
-  
+ Allplantillas:plantilla[]=[];
+ plantillapagar:plantilla;
+
   ngOnInit() {
     $("#pantalla").on({
       touchstart: function(){
@@ -29,6 +32,17 @@ export class DuplicarComponent implements OnInit {
        this.duplicada=JSON.parse( localStorage.getItem("duplicadaplatillas"));
        console.log(   this.duplicada);
 
+
+  }
+
+  pagar()
+  {
+      this.Allplantillas=JSON.parse( localStorage.getItem("platillas"));
+      console.log(this.Allplantillas.length);
+      this.duplicada=JSON.parse( localStorage.getItem("duplicadaplatillas"));
+      localStorage.setItem("platillasapagar", JSON.stringify(this.duplicada));
+      localStorage.setItem("indexpagar", String(this.Allplantillas.length-1));
+      this.router.navigate(['/pagar']);
 
   }
 

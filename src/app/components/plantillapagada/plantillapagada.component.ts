@@ -18,9 +18,12 @@ export class PlantillapagadaComponent implements OnInit {
 
 @ViewChild('test') el:ElementRef;
 Allplantillas:plantilla[]=[];
+Allplantillaspagdas:plantilla[]=[];
+plantillapagar:plantilla;
+
 
   constructor(  private dialogService:DialogService ,  private router: Router,private route: ActivatedRoute) { }
-   Allplantillaspagdas:plantilla[]=[];
+
    nombre:String;
    documento:String;
    duplicada:plantilla;
@@ -76,8 +79,6 @@ Allplantillas:plantilla[]=[];
 
               localStorage.setItem("nrosiguiente",String(siguiente));
 
-              console.log(    localStorage.getItem("nrosiguiente"));
-              console.log(    localStorage.getItem("periodosiguiente"));
 
                   var today = new Date();
                   var dd = today.getDate();
@@ -125,8 +126,7 @@ Allplantillas:plantilla[]=[];
                   let today1:string = dia+'/'+mes+'/'+String(yyyy);
                   let hora:string =String(hours)+':'+String(minutos)+':'+String(segundos);
 
-  console.log(  today1);
-  console.log(   hora);
+
 
             this.duplicada={
                  nro: nrosiguiente,
@@ -137,8 +137,7 @@ Allplantillas:plantilla[]=[];
                  perido:periodosiguiente,
                  fechatrans:"pendiente",
                  total:"$ 288.200.00",
-                 banco:"",
-                 horatrans : ""}
+                 banco:"",horatrans:""}
 
                   this.Allplantillas=JSON.parse( localStorage.getItem("platillas"));
                   this.Allplantillas.push(this.duplicada);
@@ -157,9 +156,14 @@ Allplantillas:plantilla[]=[];
 
   }
 
-  download() {
+  download(idx:number) {
 
-      Utils.CrearPdf();
+
+      this.plantillapagar=this.Allplantillaspagdas[idx];
+      localStorage.setItem("platillasapagar", JSON.stringify(this.plantillapagar));
+      localStorage.setItem("indexpagar", String(idx));
+      this.router.navigate(['/resumenpago']);
+    /*  Utils.CrearPdf();
 
 
 
