@@ -5,6 +5,7 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { DuplicarDateComponent } from '../fechaDuplicar/duplicarDate.component';
 import { plantilla } from '../../Servicios/plantilla';
 declare var $ :any;
+declare  var closeNav: Function;
 @Component({
   selector: 'app-pagar',
   templateUrl: './pagar.component.html'
@@ -25,7 +26,14 @@ caso: number;
       this.nombre=localStorage.getItem("Nombre");
        this.plantillapagar=JSON.parse( localStorage.getItem("platillasapagar"));
        this.fechapago=this.plantillapagar.perido+"12";
-
+       $("#pantalla").on({
+        touchstart: function(){
+          closeNav();
+        }, 
+        click: function(){
+          closeNav();
+        } 
+      });
 
   }
 
