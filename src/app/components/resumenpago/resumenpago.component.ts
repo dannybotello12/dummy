@@ -3,6 +3,7 @@ import * as jsPDF from 'jspdf'
 import Utils from '../../utils'
 import { plantilla } from '../../Servicios/plantilla';
 declare var $ :any;
+declare var closeNav: Function ;
 @Component({
   selector: 'app-resumenpago',
   templateUrl: './resumenpago.component.html',
@@ -20,6 +21,14 @@ export class ResumenpagoComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    $("#pantalla").on({
+      touchstart: function(){
+        closeNav();
+      }, 
+      click: function(){
+        closeNav();
+      } 
+    });
     $(window).scrollTop(0);
 
     this.documento=localStorage.getItem("documento");

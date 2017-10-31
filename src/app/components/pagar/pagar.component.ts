@@ -6,6 +6,7 @@ import { DuplicarDateComponent } from '../fechaDuplicar/duplicarDate.component';
 import { plantilla } from '../../Servicios/plantilla';
 import { FormControl, FormGroup, Validators,ReactiveFormsModule,NgForm  } from '@angular/forms';
 declare var $ :any;
+declare  var closeNav: Function;
 @Component({
   selector: 'app-pagar',
   templateUrl: './pagar.component.html'
@@ -27,7 +28,14 @@ caso: number;
       this.nombre=localStorage.getItem("Nombre");
        this.plantillapagar=JSON.parse( localStorage.getItem("platillasapagar"));
        this.fechapago=this.plantillapagar.perido+"12";
-
+       $("#pantalla").on({
+        touchstart: function(){
+          closeNav();
+        }, 
+        click: function(){
+          closeNav();
+        } 
+      });
 
   }
 

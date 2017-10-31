@@ -3,6 +3,7 @@ import { plantilla } from '../../Servicios/plantilla';
 import {Router,ActivatedRoute } from "@angular/router"
 
 declare var $ :any;
+declare var closeNav: Function ;
 @Component({
   selector: 'app-duplicar',
   templateUrl: './duplicar.component.html'
@@ -16,6 +17,15 @@ export class DuplicarComponent implements OnInit {
  plantillapagar:plantilla;
 
   ngOnInit() {
+    $("#pantalla").on({
+      touchstart: function(){
+        closeNav();
+      }, 
+      click: function(){
+        closeNav();
+      } 
+    });
+
     $(window).scrollTop(0);
        this.nombre=localStorage.getItem("Nombre");
 

@@ -9,7 +9,7 @@ import { DuplicarDateComponent } from '../fechaDuplicar/duplicarDate.component';
 
 
 declare var $ :any;
-
+declare var closeNav: Function ;
 @Component({
   selector: 'app-plantillapagada',
   templateUrl: './plantillapagada.component.html'
@@ -32,7 +32,14 @@ plantillapagar:plantilla;
     this.Allplantillaspagdas=JSON.parse( localStorage.getItem("platillaspagadas"));
      this.nombre=localStorage.getItem("Nombre");
      this.documento=localStorage.getItem("documento");
-
+     $("#pantalla").on({
+      touchstart: function(){
+        closeNav();
+      }, 
+      click: function(){
+        closeNav();
+      } 
+    });
   }
 
   modalDuplicar():void{

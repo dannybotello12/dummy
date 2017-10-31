@@ -5,6 +5,7 @@ import {Router,ActivatedRoute } from "@angular/router"
 import { plantilla } from '../../Servicios/plantilla';
 
 declare var $ :any;
+declare var closeNav :Function;
 @Component({
   selector: 'app-landing',
   templateUrl: './landing.component.html',
@@ -24,6 +25,15 @@ caso: string;
 
 
   ngOnInit() {
+
+    $("#pantalla").on({
+      touchstart: function(){
+        closeNav();
+      }, 
+      click: function(){
+        closeNav();
+      } 
+    });
 
 $(window).scrollTop(0);
 
